@@ -1,13 +1,14 @@
+mod config;
+
 use std::process;
-use minigrep;
-use clap::Parser; // trait method minigrep::Config::parse(); can only be used if it is in scope
+use clap::Parser;
 
 fn main() {
-    let config = minigrep::Config::parse(); 
+    let config = crate::config::Config::parse(); 
     // derive API will automatically parse the arguments and handle the errors
 
-    if let Err(e) = minigrep::run(&config) {
-        println!("Application Error {e}");
+    if let Err(e) = crate::config::run(&config) {
+        println!("Application Error: {e}");
         process::exit(1);
     }
 }
