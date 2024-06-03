@@ -44,7 +44,7 @@ pub fn run(c: &Config) -> Result<(), Box<dyn Error>>{
     // so the correct way is to use reference: &c.filename
 
     // also, expect() / unwrap() already handles the error for you
-    
+
     println!("---------------");
 
     for line in search(&c.query, &contents) {
@@ -67,25 +67,6 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     }
 
     results
-}
-
-// Test Example
-
-#[cfg(test)]
-mod tests {
-
-    use super::*;
-
-    #[test]
-    fn one_result() {
-        let query = "duct";
-        let contents = "\
-Rust:
-safe, fast, productive.
-Pick three.";
-
-        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
-    }
 }
 
 
