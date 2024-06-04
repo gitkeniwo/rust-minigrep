@@ -1,4 +1,4 @@
-mod config;
+pub mod config;
 
 use std::process;
 use clap::Parser;

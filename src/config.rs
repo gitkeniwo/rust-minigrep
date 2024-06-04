@@ -3,7 +3,13 @@ use clap::{command, Parser};
 use std::fs;
 use std::error::Error;
 
-// Arg Parsing using clap 4.x 's derive API 
+/// Arg Parsing using clap 4.x 's derive API
+/// 
+/// # Examples
+/// 
+/// ```
+/// let config = crate::config::Config::parse(); 
+/// ```
 #[derive(Parser)]
 #[command(name = "minigrep")]
 #[command(version = "0.1")]
@@ -29,7 +35,7 @@ pub struct Config {
     filename: String,
 }
 
-
+/// Execute the search process
 pub fn run(c: &Config) -> Result<(), Box<dyn Error>>{
 
     println!("File name: {:?}", &c.filename);
@@ -56,7 +62,7 @@ pub fn run(c: &Config) -> Result<(), Box<dyn Error>>{
     // if error occurs in the above, the error will automatically be returned
 }
 
-// Search Utility
+/// Search Utility
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let mut results = Vec::new();
 
