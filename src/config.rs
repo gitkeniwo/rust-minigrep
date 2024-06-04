@@ -7,9 +7,6 @@ use std::error::Error;
 /// 
 /// # Examples
 /// 
-/// ```
-/// let config = crate::config::Config::parse(); 
-/// ```
 #[derive(Parser)]
 #[command(name = "minigrep")]
 #[command(version = "0.1")]
