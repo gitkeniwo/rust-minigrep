@@ -1,13 +1,13 @@
-mod config;
-
 use std::process;
 use clap::Parser;
 
+pub mod config;
+
 fn main() {
-    let config = crate::config::Config::parse(); 
+    let config = config::Config::parse(); 
     // derive API will automatically parse the arguments and handle the errors
 
-    if let Err(e) = crate::config::run(&config) {
+    if let Err(e) = config::run(&config) {
         println!("Application Error: {e}");
         process::exit(1);
     }

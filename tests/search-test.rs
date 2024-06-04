@@ -1,6 +1,6 @@
 use std::fs;
 
-use minigrep::config;
+use minigrep_util::config;
 
 #[test]
 fn search_works() {

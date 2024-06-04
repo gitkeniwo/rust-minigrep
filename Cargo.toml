@@ -4,5 +4,16 @@ version = "0.1.0"
 description = "A inferior version of grep written in rust. Learn how to use clap and parse positional arguments."
 edition = "2021"
 
+[lib]
+name = "minigrep_util"
+path = "src/lib.rs"
+
+[[bin]]
+name = "minigrep"
+path = "src/main.rs"
+test = false
+bench = false
+doc = true
+
 [dependencies]
 clap = { version = "4.5.4", features = ["derive"] }
