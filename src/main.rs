@@ -8,7 +8,7 @@ fn main() {
     // derive API will automatically parse the arguments and handle the errors
 
     if let Err(e) = config::run(&config) {
-        println!("Application Error: {e}");
+        eprintln!("Application Error: {e}");
         process::exit(1);
     }
 }
