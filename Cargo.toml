@@ -1,7 +1,7 @@
 [package]
 name = "minigrep"
 version = "0.1.0"
-description = "A inferior version of grep written in rust. Learn how to use clap and parse positional arguments."
+description = "An inferior version of grep written in rust. Learn how to use clap and parse positional arguments."
 edition = "2021"
 
 [lib]
